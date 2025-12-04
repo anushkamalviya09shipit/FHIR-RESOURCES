@@ -1,0 +1,26 @@
+{
+  "resourceType": "Observation",
+  "id": "Observation-123",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "15074-8",
+        "display": "Glucose [Moles/volume] in Blood"
+      }
+    ],
+    "text": "Fasting Blood Glucose"
+  },
+  "subject": {
+    "reference": "Patient/009",
+    "display": "Hemant Agarwal"
+  },
+  "effectiveDateTime": "2024-08-15",
+  "valueQuantity": {
+    "value": 111,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/dL"
+  }
+}
