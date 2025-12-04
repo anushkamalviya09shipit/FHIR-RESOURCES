@@ -1,0 +1,89 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "example-patient",
+        "name": [
+          {
+            "use": "official",
+            "family": "Taco",
+            "given": ["Donald"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-123-4567",
+            "use": "work"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1979-05-23",
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "text": "534 Erewhon St PeasantVille, Rainbow, Vic 3999",
+            "line": ["534 Erewhon St"],
+            "city": "PleasantVille",
+            "district": "Rainbow",
+            "state": "Vic",
+            "postalCode": "3999"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "example-practitioner",
+        "name": [
+          {
+            "use": "official",
+            "family": "Reed",
+            "given": ["Evelyn"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "e.reed@clinic.example.com",
+            "use": "work"
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "example-observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "15074-8",
+              "display": "Glucose [Moles/volume] in Blood"
+            }
+          ],
+          "text": "Fasting Blood Glucose"
+        },
+        "subject": {
+          "reference": "Patient/example-patient",
+          "display": "Donald Taco"
+        },
+        "effectiveDateTime": "2024-07-15",
+        "valueQuantity": {
+          "value": 110,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      }
+    }
+  ]
+}
